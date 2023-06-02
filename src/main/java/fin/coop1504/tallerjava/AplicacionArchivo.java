@@ -9,7 +9,7 @@ import java.io.IOException;
 public class AplicacionArchivo {
 
 	public static void main(String[] args) throws IOException {
-
+		//File para leer el archivo
 		File archivo = new File("C:/javaWeb/TALLER_COOP1504/cursoJAVACoop1504/documentoParaFileJava.txt");
 
 		System.out.println("Se puede leer: " + archivo.canRead());
@@ -20,9 +20,10 @@ public class AplicacionArchivo {
 		System.out.println("Nombre archivo: " + archivo.getName());
 		System.out.println("Tamaño archivo: " + archivo.getTotalSpace());
 
-		// leer el archivo
+		// leer el archivo recorrido
 		BufferedReader recorreArchivo = null;
 		try {
+			
 			FileReader lector = new FileReader(archivo);// abre el archivo para ver contenido
 			recorreArchivo = new BufferedReader(lector);
 			String linea = recorreArchivo.readLine();
